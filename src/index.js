@@ -19,9 +19,9 @@ export default grapesjs.plugins.add('grapesjs-knowde-plugin', (editor, opts = {}
 
   const options = {
     ...{
-      blocks: Object.assign(DEFAULT_BLOCKS, opts_blocks),
-      labels: Object.assign(DEFAULT_LABELS, opts_labels),
-      blockCategories: Object.assign(DEFAULT_CATEGORIES, opts_categories),
+      blocks: {...DEFAULT_BLOCKS, ...opts_blocks},
+      labels: {...DEFAULT_LABELS, ...opts_labels},
+      blockCategories: {...DEFAULT_CATEGORIES, ...opts_categories},
       gridDevices: true,
       gridDevicesPanel: true
     },

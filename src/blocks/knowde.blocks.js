@@ -15,7 +15,13 @@ export default (editor, config = {}) => {
         content: {
           tagName: 'latest-brands',
           type: COMPONENTS_TYPES.knowde_component,
-          content: 'Placeholder for producer latest brands'
+          style: {
+            width: '100%',
+            display: 'inline-block',
+            padding: '5px',
+            'min-height': '500px',
+            'min-width': '500px'
+          }
         }
       });
     }

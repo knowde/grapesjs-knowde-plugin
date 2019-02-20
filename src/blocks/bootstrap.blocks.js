@@ -152,7 +152,8 @@ export default (editor, config = {}) => {
         category: 'Basic',
         attributes: { class: 'fa fa-picture-o' },
         content: {
-          type: 'image'
+          type: 'image',
+          activeOnRender: 1
         }
       });
     }
