@@ -63,7 +63,7 @@ function loadLayoutBasicBlocks(editor, config) {
 }
 
 /**
- * Load predefined sets blocks (2/3 columns layouts etc)
+ * Load predefined sets blocks (2/3.. columns layouts etc)
  * @param editor
  * @param config
  */
@@ -73,7 +73,7 @@ function loadLayoutPredefinedSetsBlocks(editor, config) {
 
   let blocks = config.blocks;
 
-  if (blocks.layout_column) {
+  if (blocks.layout_predefined_2_cols) {
     bm.add('layout_basic-template-2-column-block', {
       label: DEFAULT_LABELS.layout_predefined_2_cols,
       category: category_predefined,
@@ -87,13 +87,29 @@ function loadLayoutPredefinedSetsBlocks(editor, config) {
     });
   }
 
-  if (blocks.layout_column) {
+  if (blocks.layout_predefined_3_cols) {
     bm.add('layout_basic-template-3-column-block', {
       label: DEFAULT_LABELS.layout_predefined_3_cols,
       category: category_predefined,
       content: `
             <div class="container" data-gjs-type="${COMPONENTS_TYPES.layout_container_component}">
                 <div class="row" data-gjs-type="${COMPONENTS_TYPES.layout_row_component}">
+                    <div class="col" data-gjs-type="${COMPONENTS_TYPES.layout_column_component}"></div>
+                    <div class="col" data-gjs-type="${COMPONENTS_TYPES.layout_column_component}"></div>
+                    <div class="col" data-gjs-type="${COMPONENTS_TYPES.layout_column_component}"></div>
+                </div>
+            </div>`
+    });
+  }
+
+  if (blocks.layout_predefined_4_cols) {
+    bm.add('layout_basic-template-4-column-block', {
+      label: DEFAULT_LABELS.layout_predefined_4_cols,
+      category: category_predefined,
+      content: `
+            <div class="container" data-gjs-type="${COMPONENTS_TYPES.layout_container_component}">
+                <div class="row" data-gjs-type="${COMPONENTS_TYPES.layout_row_component}">
+                    <div class="col" data-gjs-type="${COMPONENTS_TYPES.layout_column_component}"></div>
                     <div class="col" data-gjs-type="${COMPONENTS_TYPES.layout_column_component}"></div>
                     <div class="col" data-gjs-type="${COMPONENTS_TYPES.layout_column_component}"></div>
                     <div class="col" data-gjs-type="${COMPONENTS_TYPES.layout_column_component}"></div>

@@ -7,9 +7,9 @@ export default (editor, config = {}) => {
   let cats = c.blockCategories;
 
   if (cats.knowde_components) {
-    if (blocks.latest_brands) {
+    if (blocks.knowde_components_latest_brands) {
       bm.add(COMPONENTS_TYPES.knowde_latest_brands + '-block', {
-        label: c.labels.latest_brands,
+        label: c.labels.knowde_components_latest_brands,
         category: c.labels.knowde_components,
         attributes: { class: 'fa fa-feed' },
         content: {
