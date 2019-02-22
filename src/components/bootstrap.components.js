@@ -223,45 +223,37 @@ export default (editor, config = {}) => {
       linkView = linkType.view;
     }
 
-    if (blocks.image) {
-      domc.addType('image', {
-        model: defaultModel.extend(
-          {
-            defaults: Object.assign({}, defaultModel.prototype.defaults, {
-              'custom-name': 'Image',
-              tagName: 'img',
-              resizable: 1,
-              attributes: {
-                src: img_src_default
-              },
-              traits: [
-                {
-                  type: 'text',
-                  label: 'Source (URL)',
-                  name: 'src'
-                },
-                {
-                  type: 'text',
-                  label: 'Alternate text',
-                  name: 'alt'
-                }
-              ].concat(defaultModel.prototype.defaults.traits)
-            })
-          },
-          {
-            isComponent: function(el) {
-              if (el && el.tagName == 'IMG') {
-                return { type: 'image' };
-              }
-            }
-          }
-        ),
-        view: defaultView
-      });
-      imageType = domc.getType('image');
-      imageModel = imageType.model;
-      imageView = imageType.view;
-    }
+    // todo: working when off
+    // if (blocks.image) {
+    //   domc.addType('image', {
+    //     model:
+    //       {
+    //         defaults: {
+    //           'custom-name': 'Image',
+    //           tagName: 'img',
+    //           resizable: 1,
+    //           attributes: {
+    //             src: img_src_default
+    //           },
+    //           traits: [
+    //             {
+    //               type: 'text',
+    //               label: 'Source (URL)',
+    //               name: 'src'
+    //             },
+    //             {
+    //               type: 'text',
+    //               label: 'Alternate text',
+    //               name: 'alt'
+    //             }
+    //           ]
+    //         }
+    //       },
+    //   });
+    //   // imageType = domc.getType('image');
+    //   // imageModel = imageType.model;
+    //   // imageView = imageType.view;
+    // }
   }
 
   // Bootstrap LAYOUT

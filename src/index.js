@@ -19,9 +19,9 @@ export default grapesjs.plugins.add('grapesjs-knowde-plugin', (editor, opts = {}
 
   const options = {
     ...{
-      blocks: {...DEFAULT_BLOCKS, ...opts_blocks},
-      labels: {...DEFAULT_LABELS, ...opts_labels},
-      blockCategories: {...DEFAULT_CATEGORIES, ...opts_categories},
+      blocks: { ...DEFAULT_BLOCKS, ...opts_blocks },
+      labels: { ...DEFAULT_LABELS, ...opts_labels },
+      blockCategories: { ...DEFAULT_CATEGORIES, ...opts_categories },
       gridDevices: true,
       gridDevicesPanel: true
     },
@@ -34,7 +34,7 @@ export default grapesjs.plugins.add('grapesjs-knowde-plugin', (editor, opts = {}
       .gjs-dashed .container, .gjs-dashed .container-fluid,
       .gjs-dashed .row,
       .gjs-dashed .col, .gjs-dashed [class^="col-"] {
-        min-height: 1.5rem !important;
+        min-height: 2.5rem !important;
       }
       .gjs-dashed .w-100 {
         min-height: .25rem !important;
@@ -45,6 +45,11 @@ export default grapesjs.plugins.add('grapesjs-knowde-plugin', (editor, opts = {}
         min-height: 25px;
         background-color: rgba(0,0,0,0.5);
       }
+      
+      .row, .container, .col {
+        margin: 7px;
+        padding: 7px;
+      }
       /* Components */
       
       .gjs-dashed .btn-group,
@@ -53,6 +58,16 @@ export default grapesjs.plugins.add('grapesjs-knowde-plugin', (editor, opts = {}
         min-height: 1.5rem !important;
       }
     
+    latest-brands {
+        background: #ccc;
+        display: block;
+        padding: 25px;
+        min-height: 200px;
+        margin: 10px;
+    }
+    latest-brands:after {
+        content: 'In this place we will display latest brand from your company';
+    }
       
     </style>
   `);

@@ -1,5 +1,5 @@
-import loadBootstrapTraits from './traits/bootstrap.traits';
+import loadGlobalTraits from './traits/global.traits';
 
 export default (editor, config = {}) => {
-  loadBootstrapTraits(editor, config);
+  loadGlobalTraits(editor, config);
 };

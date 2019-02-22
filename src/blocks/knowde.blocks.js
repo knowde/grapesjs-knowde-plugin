@@ -8,20 +8,13 @@ export default (editor, config = {}) => {
 
   if (cats.knowde_components) {
     if (blocks.latest_brands) {
-      bm.add(COMPONENTS_TYPES.knowde_component + '-block', {
+      bm.add(COMPONENTS_TYPES.knowde_latest_brands + '-block', {
         label: c.labels.latest_brands,
         category: c.labels.knowde_components,
         attributes: { class: 'fa fa-feed' },
         content: {
           tagName: 'latest-brands',
-          type: COMPONENTS_TYPES.knowde_component,
-          style: {
-            width: '100%',
-            display: 'inline-block',
-            padding: '5px',
-            'min-height': '500px',
-            'min-width': '500px'
-          }
+          type: COMPONENTS_TYPES.knowde_latest_brands
         }
       });
     }

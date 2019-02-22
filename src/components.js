@@ -1,7 +1,7 @@
-import loadBootstrapComponents from './components/bootstrap.components';
 import loadKnowdeComponents from './components/knowde.components';
+import loadLayoutComponents from './components/layout.components';
 
 export default (editor, config = {}) => {
   loadKnowdeComponents(editor, config);
-  loadBootstrapComponents(editor, config);
+  loadLayoutComponents(editor, config);
 };
