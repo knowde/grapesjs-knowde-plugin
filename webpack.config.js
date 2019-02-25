@@ -3,6 +3,7 @@ const pkg = require('./package.json');
 const webpack = require('webpack');
 const path = require('path');
 const fs = require('fs');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const name = pkg.name;
 let plugins = [];
 
@@ -40,17 +41,17 @@ module.exports = (env = {}) => {
           include: /src/,
           options: { cacheDirectory: true }
         },
+
         {
           test: /\.scss$/,
-          use: [
-            'style-loader', // creates style nodes from JS strings
-            'css-loader', // translates CSS into CommonJS
-            'sass-loader' // compiles Sass to CSS, using Node Sass by default
-          ]
+          use: ExtractTextPlugin.extract({
+            fallback: 'style-loader',
+            use: ['css-loader', 'sass-loader']
+          })
         }
       ]
     },
     externals: { grapesjs: 'grapesjs' },
-    plugins: plugins
+    plugins: [...plugins, new ExtractTextPlugin('dist/style.css')]
   };
 };

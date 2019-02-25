@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-knowde-plugin",
-  "version": "0.0.4",
+  "version": "0.0.17",
   "description": "GrapesJS Knowde Plugin",
   "main": "grapesjs-knowde-plugin.min.js",
   "scripts": {
@@ -35,6 +35,7 @@
     "babel-loader": "^8.0.4",
     "css-loader": "^2.1.0",
     "eslint": "^5.8.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.11.0",
     "prettier": "^1.10.2",
