@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-knowde-plugin",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "GrapesJS Knowde Plugin",
   "main": "grapesjs-knowde-plugin.min.js",
   "scripts": {
@@ -33,10 +33,14 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/runtime": "^7.1.2",
     "babel-loader": "^8.0.4",
+    "css-loader": "^2.1.0",
     "eslint": "^5.8.0",
     "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
     "prettier": "^1.10.2",
-    "webpack": "^4.24.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.5",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   },

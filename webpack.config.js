@@ -10,16 +10,16 @@ module.exports = (env = {}) => {
   const isProd = env.production;
 
   if (isProd) {
-    plugins = [
-      new webpack.BannerPlugin(`${name} - ${pkg.version}`),
-    ]
+    plugins = [new webpack.BannerPlugin(`${name} - ${pkg.version}`)];
   } else {
     const index = 'index.html';
     const indexDev = '_' + index;
-    plugins.push(new HtmlWebpackPlugin({
-      template: fs.existsSync(indexDev) ? indexDev : index,
-      inject: false,
-    }));
+    plugins.push(
+      new HtmlWebpackPlugin({
+        template: fs.existsSync(indexDev) ? indexDev : index,
+        inject: false
+      })
+    );
   }
 
   return {
@@ -27,20 +27,30 @@ module.exports = (env = {}) => {
     mode: isProd ? 'production' : 'development',
     devtool: isProd ? 'source-map' : 'cheap-module-eval-source-map',
     output: {
-        path: path.resolve(__dirname),
-        filename: `dist/${name}.min.js`,
-        library: name,
-        libraryTarget: 'umd',
+      path: path.resolve(__dirname),
+      filename: `dist/${name}.min.js`,
+      library: name,
+      libraryTarget: 'umd'
     },
     module: {
-      rules: [{
+      rules: [
+        {
           test: /\.js$/,
           loader: 'babel-loader',
           include: /src/,
-          options: { cacheDirectory: true },
-      }],
+          options: { cacheDirectory: true }
+        },
+        {
+          test: /\.scss$/,
+          use: [
+            'style-loader', // creates style nodes from JS strings
+            'css-loader', // translates CSS into CommonJS
+            'sass-loader' // compiles Sass to CSS, using Node Sass by default
+          ]
+        }
+      ]
     },
-    externals: {'grapesjs': 'grapesjs'},
-    plugins: plugins,
+    externals: { grapesjs: 'grapesjs' },
+    plugins: plugins
   };
-}
+};

@@ -7,6 +7,8 @@ import loadBlocks from './blocks';
 import loadPanels from './panels';
 import loadDevices from './devices';
 
+import './style.scss';
+
 export default grapesjs.plugins.add('grapesjs-knowde-plugin', (editor, opts = {}) => {
   window.editor = editor;
 
@@ -47,8 +49,11 @@ export default grapesjs.plugins.add('grapesjs-knowde-plugin', (editor, opts = {}
       }
       
       .row, .container, .col {
-        margin: 7px;
         padding: 7px;
+      }
+      .container {
+        padding-right: 21px;
+        padding-left: 21px;
       }
       /* Components */
       
