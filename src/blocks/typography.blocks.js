@@ -17,7 +17,8 @@ export default (editor, config = {}) => {
       category,
       attributes: { class: 'fa fa-paragraph' },
       content: {
-        type: COMPONENTS_TYPES.paragraph_component
+        type: COMPONENTS_TYPES.paragraph_component,
+        content: 'Double click to edit text...'
       }
     });
   }
