@@ -11,18 +11,6 @@ export default (editor, config = {}) => {
     return;
   }
 
-  // Set classes to private to avoid changing styles for global classes
-  const selectorClasses = [
-    'container',
-    'container-fluid',
-    'row',
-    'col',
-    ...[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map(v => 'col-' + v)
-  ];
-  const privateCls = selectorClasses.map(v => '.' + v);
-
-  editor.on('selector:add', selector => privateCls.indexOf(selector.getFullName()) >= 0 && selector.set('private', 1));
-
   // DIV .container
   if (blocks.layout_container) {
     domc.addType(COMPONENTS_TYPES.layout_container_component, {
