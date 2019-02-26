@@ -29,53 +29,14 @@ export default grapesjs.plugins.add('grapesjs-knowde-plugin', (editor, opts = {}
     },
     ...opts
   };
-
-  editor.addComponents(`
-    <style>
-      /* Layout */
-      .gjs-dashed .container, .gjs-dashed .container-fluid,
-      .gjs-dashed .row,
-      .gjs-dashed .col, .gjs-dashed [class^="col-"] {
-        min-height: 2.5rem !important;
-      }
-      .gjs-dashed .w-100 {
-        min-height: .25rem !important;
-        background-color: rgba(0,0,0,0.1);
-      }
-      .gjs-dashed img {
-        min-width: 25px;
-        min-height: 25px;
-        background-color: rgba(0,0,0,0.5);
-      }
-      
-      .row, .container, .col {
-        padding: 7px;
-      }
-      .container {
-        padding-right: 21px;
-        padding-left: 21px;
-      }
-      /* Components */
-      
-      .gjs-dashed .btn-group,
-      .gjs-dashed .btn-toolbar {
-        padding-right: 1.5rem !important;
-        min-height: 1.5rem !important;
-      }
-    
-    latest-brands {
-        background: #ccc;
-        display: block;
-        padding: 25px;
-        min-height: 200px;
-        margin: 10px;
-    }
-    latest-brands:after {
-        content: 'In this place we will display latest brand from your company';
-    }
-      
-    </style>
-  `);
+  // Add initial styles into editor (visible for frontend, saved to DB)
+  // editor.addComponents(`
+  //   <style>
+  //     /* Layout */
+  //
+  //
+  //   </style>
+  // `);
 
   loadDevices(editor, options);
 
@@ -92,7 +53,4 @@ export default grapesjs.plugins.add('grapesjs-knowde-plugin', (editor, opts = {}
 
   // Add panels
   loadPanels(editor, options);
-
-  // TODO Remove
-  // editor.on('load', () => editor.addComponents(`<div style="margin:100px; padding:25px;">Content loaded from the plugin</div>`, { at: 0 }))
 });

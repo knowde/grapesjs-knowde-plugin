@@ -52,6 +52,6 @@ module.exports = (env = {}) => {
       ]
     },
     externals: { grapesjs: 'grapesjs' },
-    plugins: [...plugins, new ExtractTextPlugin('dist/grapesjs-knowde-plugin.css')]
+    plugins: [...plugins, new ExtractTextPlugin(`dist/${name}.css`)]
   };
 };

@@ -10,7 +10,6 @@
     * `container`
     * `row`
     * `column`
-    * `column_break`
 * Typography:
     * `text`
     * `header`

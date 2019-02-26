@@ -1,9 +1,10 @@
 export const COMPONENTS_TYPES = {
   knowde_component: 'knowde-component',
   knowde_latest_brands: 'knowde-latest-brands',
-  layout_container_component: 'layout_container',
-  layout_row_component: 'layout_row',
-  layout_column_component: 'layout_column'
+  layout_container_component: 'layout-container',
+  layout_row_component: 'layout-row',
+  layout_column_component: 'layout-column',
+  paragraph_component: 'paragraph'
 };
 
 export const DEFAULT_BLOCKS = {
@@ -50,13 +51,17 @@ export const DEFAULT_LABELS = {
   layout_predefined_sets: 'Predefined Sets',
   layout_predefined_2_cols: '2 Columns',
   layout_predefined_3_cols: '3 Columns',
-  layout_predefined_4_cols: '4 Columns'
+  layout_predefined_4_cols: '4 Columns',
+
+  // TYPO
+  typography: 'Typography',
+  paragraph: 'Paragraph',
+  heading: 'heading'
 };
 
 export const DEFAULT_CATEGORIES = {
   knowde_components: true,
   layout_basic: true,
   layout_predefined_sets: true,
-  typography: true,
-  basic: false
+  typography: true
 };

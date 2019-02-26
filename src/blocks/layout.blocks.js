@@ -1,9 +1,7 @@
 import { COMPONENTS_TYPES, DEFAULT_LABELS } from '../consts';
 
 export default (editor, config = {}) => {
-  const bm = editor.BlockManager;
   const c = config;
-  let blocks = c.blocks;
   let cats = c.blockCategories;
 
   if (cats.layout_basic) {
