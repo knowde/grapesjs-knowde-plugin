@@ -1,6 +1,15 @@
+// TODO: refactor this to objects...
+// knowde_counter: {
+//  id: '',
+//  label: 'ACasd',
+//  tagName: 'simple-counter'
+//  enabled: boolean
+//
+// }
 export const COMPONENTS_TYPES = {
   knowde_component: 'knowde-component',
   knowde_latest_brands: 'knowde-latest-brands',
+  knowde_counter: 'knowde-counter',
   layout_container_component: 'layout-container',
   layout_row_component: 'layout-row',
   layout_column_component: 'layout-column',
@@ -10,6 +19,7 @@ export const COMPONENTS_TYPES = {
 export const DEFAULT_BLOCKS = {
   //knowde_components
   knowde_components_latest_brands: true,
+  knowde_components_counter: true,
 
   // LAYOUT
   layout_container: true,
@@ -38,8 +48,9 @@ export const DEFAULT_BLOCKS = {
 export const DEFAULT_LABELS = {
   // Knowde components
   knowde_components: 'Knowde Components',
-  knowde_latest_brands: 'Latest Brands',
   knowde_components_latest_brands: 'Latest brands',
+  knowde_components_counter: 'Counter',
+
   // LAYOUT
   // BASIC
   layout_category: 'Layout',
