@@ -1,43 +1,40 @@
-/*! grapesjs-knowde-plugin - 0.0.20 */
-.gjs-dashed .container, .gjs-dashed .container-fluid,
-.gjs-dashed .row,
-.gjs-dashed .col, .gjs-dashed [class^="col-"] {
-  min-height: 2.5rem !important; }
-
-.gjs-dashed .w-100 {
-  min-height: .25rem !important;
-  background-color: rgba(0, 0, 0, 0.1); }
-
-.gjs-dashed img {
-  min-width: 25px;
-  min-height: 25px;
-  background-color: rgba(0, 0, 0, 0.5); }
-
-.row, .container, .col, p {
-  padding: 7px; }
-
-.container {
-  padding-right: 21px;
-  padding-left: 21px; }
-
-/* Components */
-.gjs-dashed .btn-group,
-.gjs-dashed .btn-toolbar {
-  padding-right: 1.5rem !important;
-  min-height: 1.5rem !important; }
-
-latest-brands {
-  background: #ccc;
-  display: block;
-  padding: 25px;
-  min-height: 200px;
-  margin: 10px; }
-
-latest-brands:after {
-  content: 'In this place we will display latest brand from your company'; }
-
-p {
-  min-height: 2.5rem !important;
-  width: 100%; }
+/*! grapesjs-knowde-plugin - 0.0.21 */
+.gjs-dashed {
+  /* Components */ }
+  .gjs-dashed .container, .gjs-dashed .container-fluid,
+  .gjs-dashed .row,
+  .gjs-dashed .col, .gjs-dashed [class^="col-"] {
+    min-height: 2.5rem !important; }
+  .gjs-dashed .w-100 {
+    min-height: .25rem !important;
+    background-color: rgba(0, 0, 0, 0.1); }
+  .gjs-dashed img {
+    min-width: 25px;
+    min-height: 25px;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .gjs-dashed .row, .gjs-dashed .container, .gjs-dashed .col, .gjs-dashed p {
+    padding: 7px; }
+  .gjs-dashed .container {
+    padding-right: 21px;
+    padding-left: 21px; }
+  .gjs-dashed .btn-group,
+  .gjs-dashed .btn-toolbar {
+    padding-right: 1.5rem !important;
+    min-height: 1.5rem !important; }
+  .gjs-dashed latest-brands {
+    background: #ccc;
+    display: block;
+    padding: 25px;
+    min-height: 200px;
+    margin: 10px; }
+  .gjs-dashed latest-brands:after {
+    content: 'In this place we will display latest brand from your company'; }
+  .gjs-dashed simple-counter {
+    font-size: 69px; }
+  .gjs-dashed simple-counter::after {
+    content: attr(prefix) attr(end) attr(suffix); }
+  .gjs-dashed p {
+    min-height: 2.5rem !important;
+    width: 100%; }
 
 /*# sourceMappingURL=grapesjs-knowde-plugin.css.map*/
