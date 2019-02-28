@@ -45,7 +45,7 @@
     font-size: 69px;
   }
   simple-counter::after {
-    content: attr(prefix) attr(end) attr(suffix);
+    content: attr(prefix) attr(end) attr(suffix) attr(src);
   }
 
   p {

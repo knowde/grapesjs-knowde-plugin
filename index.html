@@ -16,7 +16,6 @@
     </style>
 </head>
 <body>
-
 <div id="gjs" style="height:0px; overflow:hidden">
 
     <div class="container">
@@ -26,7 +25,8 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <simple-counter start="0" end="1290" decimals="2" groupingSeparator="," decimalSeparator="." duration="7" useGrouping="true" prefix="" suffix=""></simple-counter>
+                <simple-counter start="0" end="1290" decimals="2" groupingSeparator="," decimalSeparator="."
+                                duration="7" useGrouping="true" prefix="" suffix=""></simple-counter>
             </div>
             <div class="col">
             </div>
@@ -47,7 +47,6 @@
         height: '100%',
         showOffsets: 1,
         noticeOnUnload: 0,
-        storageManager: {autoload: 0}, // change to 0 for disable auto loading data on page load
         container: '#gjs',
         fromElement: true,
 
@@ -71,14 +70,38 @@
                 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'
             ]
         },
+        storageManager: {
+            id: 'cms-',             // Prefix identifier that will be used on parameters
+            autosave: true,
+            type: 'local',
+            stepsBeforeSave: 1,
+            urlStore: 'https://jsonplaceholder.typicode.com/posts',
+            urlLoad: 'https://jsonplaceholder.typicode.com/posts',
+            contentTypeJson: true,
+            //Enable/Disable components model (JSON format)
+            storeComponents: 1,
+            //Enable/Disable styles model (JSON format)
+            storeStyles: 1,
+            //Enable/Disable saving HTML template
+            storeHtml: 1,
+            //Enable/Disable saving CSS template
+            storeCss: 1,
+            // ONLY FOR REMOTE STORAGE
+            // Custom parameters to pass with the remote storage request, eg. csrf token
+            params: {},
+            // Custom headers for the remote storage request
+            headers: {},
+        },
         assetManager: {
-            multiUpload: true,
+            multiUpload: false,
             autoAdd: 1,
             embedAsBase64: 0,
             // Upload endpoint, set `false` to disable upload, default `false`
-            upload: 'https://api.imgur.com/3/upload',
+            upload: 0, // 'https://staging.knowde.com/api/v1/companies/request_access_from_competitor',
             // The name used in POST to pass uploaded files, default: `'files'`
             uploadName: 'files',
+            credentials: 'omit'
+
         },
     });
     window.editor = editor;
@@ -86,16 +109,23 @@
     //     console.log('Store Loaded ', e);
     // });
 
-    // // save
-    // editor.on('storage:store', e => {
-    //     const components = editor.DomComponents.getComponents();
-    //     console.log('getComponents()', components);
-    //
-    //     console.log('Stored ...');
-    //     // console.log('components', JSON.parse(e).styles);
-    // });
+    // save
+    editor.on('storage:store', e => {
+        // const components = editor.DomComponents.getComponents();
+        // console.log('getComponents()', components);
+
+        console.log('Stored ...', e);
+        // console.log('components', JSON.parse(e).styles);
+    });
+    editor.on('storage:start:store', (objectToStore) => {
+        console.log('object to store,', objectToStore)
+    });
     editor.render();
-    editor.Panels.getButton('views', 'open-blocks').set('active', true)
+
+
+    editor.Panels.getButton('views', 'open-blocks').set('active', true); // open block manager by default
+    editor.Commands.run('sw-visibility'); // switch grind visibility on by default
+
 
 </script>
 </body>

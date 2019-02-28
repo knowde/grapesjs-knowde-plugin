@@ -1,4 +1,4 @@
-/*! grapesjs-knowde-plugin - 0.0.21 */
+/*! grapesjs-knowde-plugin - 0.0.22 */
 .gjs-dashed {
   /* Components */ }
   .gjs-dashed .container, .gjs-dashed .container-fluid,
@@ -32,7 +32,7 @@
   .gjs-dashed simple-counter {
     font-size: 69px; }
   .gjs-dashed simple-counter::after {
-    content: attr(prefix) attr(end) attr(suffix); }
+    content: attr(prefix) attr(end) attr(suffix) attr(src); }
   .gjs-dashed p {
     min-height: 2.5rem !important;
     width: 100%; }

@@ -5,7 +5,6 @@ import loadTraits from './traits';
 import loadComponents from './components';
 import loadBlocks from './blocks';
 import loadPanels from './panels';
-import loadDevices from './devices';
 
 import './style.scss';
 
@@ -24,8 +23,7 @@ export default grapesjs.plugins.add('grapesjs-knowde-plugin', (editor, opts = {}
       blocks: { ...DEFAULT_BLOCKS, ...opts_blocks },
       labels: { ...DEFAULT_LABELS, ...opts_labels },
       blockCategories: { ...DEFAULT_CATEGORIES, ...opts_categories },
-      gridDevices: true,
-      gridDevicesPanel: true
+      gridDevices: true
     },
     ...opts
   };
@@ -37,8 +35,6 @@ export default grapesjs.plugins.add('grapesjs-knowde-plugin', (editor, opts = {}
   //
   //   </style>
   // `);
-
-  loadDevices(editor, options);
 
   // Add components
   loadComponents(editor, options);
