@@ -10,6 +10,7 @@ export const COMPONENTS_TYPES = {
   knowde_component: 'knowde-component',
   knowde_latest_brands: 'knowde-latest-brands',
   knowde_counter: 'knowde-counter',
+  knowde_slider: 'knowde-slider',
   layout_container_component: 'layout-container',
   layout_row_component: 'layout-row',
   layout_column_component: 'layout-column',
@@ -20,6 +21,7 @@ export const DEFAULT_BLOCKS = {
   //knowde_components
   knowde_components_latest_brands: true,
   knowde_components_counter: true,
+  knowde_components_slider: true,
 
   // LAYOUT
   layout_container: true,
@@ -50,6 +52,7 @@ export const DEFAULT_LABELS = {
   knowde_components: 'Knowde Components',
   knowde_components_latest_brands: 'Latest brands',
   knowde_components_counter: 'Counter',
+  knowde_components_slider: 'Slider',
 
   // LAYOUT
   // BASIC

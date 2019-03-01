@@ -79,12 +79,56 @@ export default (editor, config = {}) => {
             label: 'Suffix',
             name: 'suffix'
           }
-          // {
-          //   type: 'select',
-          //   label: 'Grouping separator',
-          //   name: 'groupingSeparator',
-          //   options: [{ value: ',', name: 'Comma' }, { value: ' ', name: 'Space' }]
-          // }
+        ]
+      }
+    }
+  });
+
+  // todo: TMP...
+  const slidesList = [1, 2, 3, 4], // no. of slides
+    slidesProperties = ['image', 'title', 'buttonText', 'buttonAction'];
+
+  const slidesAttrs = {};
+  // Fill attributes for slides
+  slidesList.forEach(slideNo => {
+    slidesProperties.forEach(optionName => {
+      slidesAttrs[`slide-${slideNo}-${optionName}`] = '';
+    });
+  });
+
+  // generate traits
+
+  // console.log(slidesAttrs);
+  /// TODO: END OF TMP>...
+
+  domc.addType(COMPONENTS_TYPES.knowde_slider, {
+    isComponent: el => {
+      if (el && el.tagName == 'SIMPLE-SLIDER') {
+        return { type: COMPONENTS_TYPES.knowde_slider };
+      }
+    },
+    model: {
+      defaults: {
+        'custom-name': DEFAULT_LABELS.knowde_components_slider,
+        tagName: 'simple-slider',
+        attributes: { ...slidesAttrs },
+        droppable: false,
+        stylable: true,
+        copyable: false,
+        editable: false,
+        traits: [
+          //
+          ...slidesList
+            .map(slideNo => {
+              return slidesProperties.map(optionName => {
+                return {
+                  type: 'text',
+                  label: `Slide ${slideNo} ${optionName}`,
+                  name: `slide-${slideNo}-${optionName}`
+                };
+              });
+            })
+            .flat(1)
         ]
       }
     }

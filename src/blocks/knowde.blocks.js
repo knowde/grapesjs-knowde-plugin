@@ -32,4 +32,16 @@ export default (editor, config = {}) => {
       }
     });
   }
+
+  if (blocks.knowde_components_slider) {
+    bm.add(COMPONENTS_TYPES.knowde_slider + '-block', {
+      label: c.labels.knowde_components_slider,
+      category: c.labels.knowde_components,
+      attributes: { class: 'fa fa-number' },
+      content: {
+        tagName: 'simple-slider',
+        type: COMPONENTS_TYPES.knowde_slider
+      }
+    });
+  }
 };
