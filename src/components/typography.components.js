@@ -23,14 +23,14 @@ export default (editor, config = {}) => {
     domc.addType(COMPONENTS_TYPES.paragraph_component, {
       extend: 'text',
       isComponent: el => {
-        if (el && el.tagName && el.tagName == 'P') {
+        if (el && el.tagName && el.tagName == 'DIV') {
           return { type: COMPONENTS_TYPES.paragraph_component };
         }
       },
       model: {
         defaults: {
           'custom-name': DEFAULT_LABELS.paragraph,
-          tagName: 'p',
+          tagName: 'div',
           traits: [
             {
               type: 'class_select',
