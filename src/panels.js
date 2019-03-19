@@ -1,4 +1,12 @@
-import { cmdClear, cmdDeviceDesktop, cmdDeviceMobile, cmdDeviceTablet, cmdImport, cmdSave } from './commands/consts';
+import {
+  cmdClear,
+  cmdDeviceDesktop,
+  cmdDeviceMobile,
+  cmdDeviceTablet,
+  cmdImport,
+  cmdPreview,
+  cmdSave
+} from './commands/consts';
 
 export default (editor, config = {}) => {
   const pn = editor.Panels;
@@ -30,12 +38,12 @@ export default (editor, config = {}) => {
         //   context: swv,
         //   className: 'fa fa-square-o'
         // },
-        // {
-        //   id: prv,
-        //   context: prv,
-        //   command: e => e.runCommand(prv),
-        //   className: 'fa fa-eye'
-        // },
+        {
+          id: cmdPreview,
+          command: cmdPreview,
+          attributes: { title: 'Preview' },
+          className: 'fa fa-eye'
+        },
         {
           id: ful,
           command: ful,
