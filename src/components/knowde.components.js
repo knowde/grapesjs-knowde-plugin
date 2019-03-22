@@ -122,7 +122,7 @@ export default (editor, config = {}) => {
             .map(slideNo => {
               return slidesProperties.map(optionName => {
                 return {
-                  type: optionName === 'image' ? 'image' : 'text',
+                  type: optionName === 'image' ? 'text' : 'text',
                   label: `Slide ${slideNo} ${optionName}`,
                   name: `slide-${slideNo}-${optionName}`
                 };

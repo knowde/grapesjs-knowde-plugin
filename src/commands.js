@@ -27,8 +27,3 @@ export default (editor, config = {}) => {
   cm.add(cmdDeviceTablet, e => e.setDevice('Tablet'));
   cm.add(cmdDeviceMobile, e => e.setDevice('Mobile portrait'));
 };
-
-// remove information about preview mode
-// load default font for grapesjs editor
-// way to center counter
-//
