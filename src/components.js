@@ -1,6 +1,6 @@
 import loadKnowdeComponents from './components/knowde.components';
 import loadLayoutComponents from './components/layout.components';
-import loadTypographyComponents from './components/typography.components';
+import loadBasicsComponents from './components/basics.components';
 import _s from 'underscore.string';
 
 export default (editor, config = {}) => {
@@ -24,5 +24,5 @@ export default (editor, config = {}) => {
 
   loadKnowdeComponents(editor, config);
   loadLayoutComponents(editor, config);
-  loadTypographyComponents(editor, config);
+  loadBasicsComponents(editor, config);
 };

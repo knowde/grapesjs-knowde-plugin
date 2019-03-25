@@ -44,7 +44,8 @@ export const DEFAULT_BLOCKS = {
 
   // TYPOGRAPHY
   header: true,
-  paragraph: true
+  paragraph: true,
+  google_map: true
 };
 
 export const DEFAULT_LABELS = {
@@ -68,7 +69,8 @@ export const DEFAULT_LABELS = {
   layout_predefined_4_cols: '4 Columns',
 
   // TYPO
-  typography: 'Typography',
+  basics: 'Basics',
+  google_map: 'Map',
   paragraph: 'Paragraph',
   heading: 'heading'
 };
@@ -77,5 +79,5 @@ export const DEFAULT_CATEGORIES = {
   knowde_components: true,
   layout_basic: true,
   layout_predefined_sets: true,
-  typography: true
+  basics: true
 };

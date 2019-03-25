@@ -7,7 +7,7 @@ export default (editor, config = {}) => {
   let blocks = c.blocks;
   let cats = c.blockCategories;
 
-  if (!cats.typography) {
+  if (!cats.basics) {
     return;
   }
 
@@ -19,6 +19,21 @@ export default (editor, config = {}) => {
       content: {
         type: COMPONENTS_TYPES.paragraph_component,
         content: 'Double click to edit text...'
+      }
+    });
+  }
+
+  if (blocks.google_map) {
+    bm.add('map', {
+      label: 'Map',
+      category,
+      attributes: { class: 'fa fa-map-o' },
+      content: {
+        type: 'map',
+        style: { height: '350px' },
+        mapType: 'q', // q - Roadmap / w - Satellite
+        address: 'Miami',
+        zoom: 1 // max 20
       }
     });
   }

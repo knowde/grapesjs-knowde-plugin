@@ -7,7 +7,7 @@ export default (editor, config = {}) => {
   let blocks = c.blocks;
   let cats = c.blockCategories;
 
-  if (!cats.typography) {
+  if (!cats.basics) {
     return;
   }
 
