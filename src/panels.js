@@ -68,7 +68,7 @@ export default (editor, config = {}) => {
         {
           id: cmdImport,
           className: 'fa fa-download',
-          command: e => e.runCommand(cmdImport)
+          command: e => e.runCommand(cmdImport, { force: 1 })
         },
         {
           id: cmdClear,
