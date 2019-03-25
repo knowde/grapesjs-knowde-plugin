@@ -30,9 +30,9 @@ export default (editor, config = {}) => {
       attributes: { class: 'fa fa-map-o' },
       content: {
         type: 'map',
-        style: { height: '350px' },
+        style: { height: '350px', width: '100%' },
         mapType: 'q', // q - Roadmap / w - Satellite
-        address: 'Miami',
+        address: '',
         zoom: 1 // max 20
       }
     });

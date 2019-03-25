@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-knowde-plugin",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "description": "GrapesJS Knowde Plugin",
   "main": "grapesjs-knowde-plugin.min.js",
   "scripts": {
