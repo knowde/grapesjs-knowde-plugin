@@ -36,7 +36,6 @@ export const DEFAULT_BLOCKS = {
   default: false,
   text: true,
   link: true,
-  image: true,
 
   button: true,
   button_group: true,
@@ -45,7 +44,9 @@ export const DEFAULT_BLOCKS = {
   // TYPOGRAPHY
   header: true,
   paragraph: true,
-  google_map: true
+  google_map: true,
+  image: true,
+  video: true
 };
 
 export const DEFAULT_LABELS = {
@@ -72,7 +73,9 @@ export const DEFAULT_LABELS = {
   basics: 'Basics',
   google_map: 'Map',
   paragraph: 'Paragraph',
-  heading: 'heading'
+  heading: 'heading',
+  image: 'Image',
+  video: 'Video'
 };
 
 export const DEFAULT_CATEGORIES = {

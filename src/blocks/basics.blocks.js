@@ -3,7 +3,7 @@ import { COMPONENTS_TYPES, DEFAULT_LABELS } from '../consts';
 export default (editor, config = {}) => {
   const bm = editor.BlockManager;
   const c = config;
-  const category = { id: 'typography', label: DEFAULT_LABELS.typography };
+  const category = { id: 'basics', label: DEFAULT_LABELS.basics };
   let blocks = c.blocks;
   let cats = c.blockCategories;
 
@@ -37,4 +37,32 @@ export default (editor, config = {}) => {
       }
     });
   }
+
+  if (blocks.image) {
+    bm.add('image', {
+      label: 'Image',
+      category,
+      attributes: { class: 'fa fa-picture-o' },
+      content: {
+        style: { color: 'black' },
+        type: 'image',
+        activeOnRender: 1
+      }
+    });
+  }
+
+  bm.add('video', {
+    label: config.labels.video,
+    category,
+    attributes: { class: 'fa fa-youtube-play' },
+    content: {
+      type: 'video',
+      provider: 'yt',
+      src: 'vTIIMJ9tUc8',
+      style: {
+        height: '350px',
+        width: '615px'
+      }
+    }
+  });
 };
