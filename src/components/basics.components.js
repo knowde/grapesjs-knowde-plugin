@@ -23,7 +23,9 @@ export default (editor, config = {}) => {
     domc.addType(COMPONENTS_TYPES.paragraph_component, {
       extend: 'text',
       isComponent: el => {
-        if (el && el.tagName && el.tagName == 'DIV') {
+        console.log(el.dataset);
+
+        if (el && el.tagName && el.tagName == 'DIV' && el.dataset.isParagraph) {
           return { type: COMPONENTS_TYPES.paragraph_component };
         }
       },
@@ -31,6 +33,8 @@ export default (editor, config = {}) => {
         defaults: {
           'custom-name': DEFAULT_LABELS.paragraph,
           tagName: 'div',
+          attributes: { 'data-is-paragraph': 'true' },
+          // classes: ['paragraph'],
           traits: [
             {
               type: 'class_select',

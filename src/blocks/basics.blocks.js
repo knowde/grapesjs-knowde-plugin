@@ -58,7 +58,7 @@ export default (editor, config = {}) => {
     content: {
       type: 'video',
       provider: 'yt',
-      src: 'vTIIMJ9tUc8',
+      src: '',
       style: {
         height: '350px',
         width: '615px'
